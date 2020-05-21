@@ -1,7 +1,7 @@
 on: [push]
 
 jobs:
-  build_to_satellite:
+  build-and-publish-content:
     runs-on: ubuntu-latest
     name: Build and upload content to IBM Satellite
     steps:
@@ -9,8 +9,8 @@ jobs:
       id: push
       uses: IBM/satellite-config-actions@alpha0.2
       with:
-        apikey: ''
-        channel_id: ''
-        filename: 'resource.yml'
+        apikey: ${{ secrets.apikey }}
+        channel_id: 'a634d127-33d2-4854-82f6-6f4b82d46cd9'
+        filename: 'namespace.yml'
     - name: Display the version_id
       run: echo "New version created ${{ steps.push.outputs.version_id }}"
