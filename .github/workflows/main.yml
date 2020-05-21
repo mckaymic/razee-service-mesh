@@ -5,6 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and upload content to IBM Satellite
     steps:
+    - name: Checkout
+      id: checkout
+      uses: actions/checkout@v2
     - name: Upload to Satellite
       id: push
       uses: IBM/satellite-config-actions@alpha0.2
