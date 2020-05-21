@@ -10,7 +10,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Upload to Satellite
       id: push
-      uses: IBM/satellite-config-actions@alpha0.2
+      uses: IBM/satellite-config-actions@alpha0.3
       with:
         apikey: ${{ secrets.apikey }}
         channel_id: 'a634d127-33d2-4854-82f6-6f4b82d46cd9'
