@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and upload content to IBM Satellite
     steps:
-    - name: Hello world action step
+    - name: Upload to Satellite
       id: push
-      uses: IBM/satellite-config-actions@alpha0.1
+      uses: IBM/satellite-config-actions@alpha0.2
       with:
         apikey: ''
         channel_id: ''
