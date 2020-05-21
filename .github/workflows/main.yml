@@ -15,6 +15,6 @@ jobs:
         apikey: ${{ secrets.apikey }}
         channel_id: 'a634d127-33d2-4854-82f6-6f4b82d46cd9'
         filename: 'namespace.yml'
-        version_name: 'a.0'
+        version_name: $GITHUB_RUN_NUMBER
     - name: Display the version_id
       run: echo "New version created ${{ steps.push.outputs.version_id }}"
