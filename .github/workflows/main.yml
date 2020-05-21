@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: Hello world action step
       id: push
-      uses: IBM/satellite-config-actions@alpha1
+      uses: IBM/satellite-config-actions@alpha0.1
       with:
         apikey: ''
         channel_id: ''
