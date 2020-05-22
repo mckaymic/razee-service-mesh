@@ -8,6 +8,11 @@ jobs:
     - name: Checkout
       id: checkout
       uses: actions/checkout@v2
+    - name: Lint k8s manifest files
+      uses: Azure/k8s-lint@v1
+      with:
+        manifests: namespace.yml
+        lintType: kubeval
     - name: Upload to Satellite
       id: push
       uses: IBM/satellite-config-actions@v1
@@ -18,3 +23,4 @@ jobs:
         version_name: ${{ github.run_number }}
     - name: Display the version_id
       run: echo "New version created ${{ steps.push.outputs.version_id }}"
+
