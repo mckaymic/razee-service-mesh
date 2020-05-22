@@ -22,5 +22,5 @@ jobs:
         filename: 'namespace.yml'
         version_name: ${{ github.run_number }}
     - name: Display the version_id
-      run: env
+      run: echo ${{steps.push.outputs.versionid}}
 
